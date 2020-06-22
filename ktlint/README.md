@@ -3,7 +3,7 @@
 You can use this container to run [`ktlint`](https://ktlint.github.io/) without installation (maybe on a remote machine)
 
 ```shell
-docker run --rm --mount type=bind,src=${PWD},dst=/code nemooudeis/ktlint ktlint "/code/**/*.kt"
+docker run --rm --mount type=bind,src=$(pwd),dst=/code nemooudeis/ktlint ktlint "/code/**/*.kt"
 ```
 
 Or use it as a step within your build pipeline, in particular if your test are slow and fast feedback of ktlint is valuable, e.g. with CircleCI
