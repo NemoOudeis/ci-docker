@@ -1,6 +1,6 @@
 # [SpotBugs](https://github.com/spotbugs/spotbugs) on CircleCI Android Containers
 
-Intended for running SpotBugs in parallel to other, outside of gradle. SpotBugs operates on bytecode, so you need to compile the classes first, either in a previous job (and pass it via the workspace) or compile inside the `spotbugs` step (only compiling java tends to be faster than the full android build cycle by factor of 10).
+Built to run SpotBugs on CI, outside of `gradle`, in parallel to other jobs. SpotBugs operates on bytecode, so you need to compile the classes first, either in a previous job (and pass it via the workspace) or compile inside the `spotbugs` step (only compiling java tends to be faster than the full android build cycle by factor of 10).
 
 You can run it locally:
 
@@ -14,7 +14,7 @@ Or use it as a step within your build pipeline:
 jobs:
   spotbugs:
     docker:
-      - image: nemooudeis/android-spotbugs:28.0.0-4.0.4
+      - image: nemooudeis/android-spotbugs:28.0.0-4.0.5
     steps:
       - checkout
       - run:
@@ -40,5 +40,4 @@ jobs:
           root: .
           paths:
             - coverage # to process XML report in other jobs
-
 ```
