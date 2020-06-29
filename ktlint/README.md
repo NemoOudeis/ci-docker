@@ -1,5 +1,7 @@
 # [ktlint](https://ktlint.github.io/) container, build for CI Pipelines
 
+[![Docker Hub Pulls](https://img.shields.io/docker/pulls/nemooudeis/ktlint.svg)](https://hub.docker.com/r/nemooudeis/ktlint)
+
 You can use this container to run [`ktlint`](https://ktlint.github.io/) without installation (maybe on a remote machine)
 
 ```shell
