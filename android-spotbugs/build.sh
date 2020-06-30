@@ -6,7 +6,6 @@ REPOSITORY=nemooudeis/android-spotbugs
 
 for ANDROID_VERSION in 28.0.0 29.0.0
 do  
-  echo cimg/android:${ANDROID_VERSION}
   docker build \
     --build-arg spotbugs_version=${SPOTBUGS_VERSION} \
     --build-arg android_version=${ANDROID_VERSION} \
@@ -15,4 +14,4 @@ do
     .
 done
 
-# docker push ${REPOSITORY}
+docker push ${REPOSITORY}
