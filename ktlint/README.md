@@ -10,15 +10,14 @@ docker run --rm --mount type=bind,src=$(pwd),dst=/code nemooudeis/ktlint ktlint 
 
 Or use it as a step within your build pipeline, in particular if your test are slow and fast feedback of ktlint is valuable, e.g. with CircleCI
 
-
 ```yaml
 jobs:
   ktlint:
-    docker: 
+    docker:
       - image: nemooudeis/ktlint
     steps:
       - checkout
-      - run: 
+      - run:
           name: ktlint to check for code style violations in changes between PR and origin/master
           command: |
             set +e # allow grep to fail without failing the whole step (in cases no kotlin files were changed)
