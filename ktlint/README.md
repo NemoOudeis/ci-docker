@@ -14,7 +14,7 @@ Or use it as a step within your build pipeline, in particular if your test are s
 jobs:
   ktlint:
     docker:
-      - image: nemooudeis/ktlint
+      - image: nemooudeis/ktlint:0.40.0
     steps:
       - checkout
       - run:
