@@ -10,6 +10,13 @@ docker build --build-arg version=${version} ktlint -t nemooudeis/ktlint -t nemoo
 docker push nemooudeis/ktlint
 ```
 
+## [spotbugs](https://hub.docker.com/repository/docker/nemooudeis/spotbugs)
+
+```shell
+cd spotbugs
+./build.sh SPOTBUGS_VERSION
+```
+
 ## [android-sdk](https://hub.docker.com/repository/docker/nemooudeis/android-sdk)
 
 ```shell
